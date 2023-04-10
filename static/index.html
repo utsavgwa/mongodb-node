@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB Sample App</title>
+</head>
+<body>
+    <input type="text" placeholder="Search" id="search">
+    <button id="btn">Search-</button>
+    <pre>
+        <code id="code"></code>
+    </pre>
+    <script>
+        const btn =  document.getElementById('btn');
+        const code =  document.getElementById('code');
+        const search =  document.getElementById('search');
+
+        btn.addEventListener('click', async()=>{
+            code.innerText = 'Loading';
+
+            // requesting from node server
+            // as soon as someone clicks the button, it grabs the value out of search, and attach that onto a /get with a query string of search=/value/ and then take this in node server, and then use that to search on mongo DB
+            const res = await fetch(
+                '/get?search='+ encodeURIComponent(search.value)
+            );
+            const json = await res.json();
+            // for preformatted json object, that will get into the results in <code>- as output
+            code.innerText = "\n"+ JSON.stringify(json, null, 4)
+        })
+    </script>
+</body>
+</html>
