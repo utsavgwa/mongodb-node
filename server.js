@@ -9,9 +9,11 @@ const connectionString = "mongodb://localhost:27017";
 
 async function init(){
     const client = new MongoClient(connectionString,{
+        // mongodb's new way of discovering servers - Unified Technology
         useUnifiedTopology:true
     });
-
+    
+    // to connect the node server to mongo
     await client.connect();
     const app = express();
 
