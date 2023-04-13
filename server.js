@@ -1,4 +1,5 @@
-// whole entirety of writing mongo queries fro node.js
+// whole entirety of writing mongo queries from node.js
+// most basic node application querying mongo
 
 const express = require ('express');
 const {MongoClient}= require('mongodb');
@@ -12,7 +13,6 @@ async function init(){
     });
 
     await client.connect();
-
     const app = express();
 
     app.get('/get', async(req, res)=> {

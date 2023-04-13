@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MongoDB Node App</title>
+
+    <meta property="og:title" content="Node.js app with MongoDB" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://utsavsingh.me/mongodb-node"
+    />
+    <meta
+      property="og:description"
+      content="A basic Node.js app using MongoDB for queries is a powerful combination for streamlined database interactions and boosted performance."
+    />
+
+    <title>Node.js app with MongoDB</title>
 </head>
 <body>
     <input type="text" placeholder="Search" id="search">
-    <button id="btn">Search-</button>
+    <button id="btn">Search</button>
     <pre>
         <code id="code"></code>
     </pre>
@@ -26,7 +38,7 @@
                 '/get?search='+ encodeURIComponent(search.value)
             );
             const json = await res.json();
-            // for preformatted json object, that will get into the results in <code>- as output
+            // for preformatted JSON object, that will get into the results in <code>- as output
             code.innerText = "\n"+ JSON.stringify(json, null, 4)
         })
     </script>
