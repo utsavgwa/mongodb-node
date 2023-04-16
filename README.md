@@ -16,7 +16,7 @@ npm install
 
 ## Features
 
-This is a very bareones server, for a MongoDB app.
+This is a very bare-bones server, for a MongoDB app.
 It is for demonstration purposes on how to connect a front-end to a database, through a Node.js server.
 How to connect and query with MongoDB and Express?
 
