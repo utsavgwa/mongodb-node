@@ -10,17 +10,16 @@ Next, clone this repository and navigate to the project directory in your termin
 
 Install the required dependencies using npm:
 
-```bash
+```
 npm install
 ```
 
-## Live Preview
+## Features
 
-Site is live as [**_MongoDB Node_**](https://utsavsingh.me/mongodb-node/), go and check it out!
-See how it works.
+This is a very bareones server, for a MongoDB app.
+It is for demonstration purposes on how to connect a front-end to a database, through a Node.js server.
+How to connect and query with MongoDB and Express?
 
-URL for website is --
-https://utsavsingh.me/mongodb-node/
 
 ## Contributing
 
